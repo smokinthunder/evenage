@@ -1,8 +1,12 @@
+import 'package:evenage/application/auth/auth_bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 import 'package:evenage/presentation/auth/signup_screen.dart';
-import 'package:evenage/presentation/home.dart';
+// import 'package:evenage/presentation/home.dart';
 import 'package:flutter/material.dart';
 import 'package:evenage/domain/core/di/injectable.dart';
-
+import 'package:evenage/infrastructure/core/firebase_option.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,9 +26,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Evenage',
-      home: SignUpScreen(),
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => getIt<AuthBloc>(),
+          ),
+        ],
+        child: SignUpScreen(),
+      ),
     );
   }
 }
