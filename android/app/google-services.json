@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129414579832",
+    "project_id": "eve-nage",
+    "storage_bucket": "eve-nage.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129414579832:android:0de4e0f145cc7205e78f8d",
+        "android_client_info": {
+          "package_name": "com.example.evenage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAlz4FqpMph36MfxrM9Vyx4z5kQE75zaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
