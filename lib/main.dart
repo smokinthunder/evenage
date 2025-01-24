@@ -1,3 +1,5 @@
+
+import 'package:evenage/presentation/eventlist.dart';
 import 'package:evenage/presentation/home.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Evenage',
-      home: Home(),
+      home: BottomNavBar(),
     );
   }
 }
