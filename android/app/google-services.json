@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "72087237069",
+    "project_id": "evenage-b3ce0",
+    "storage_bucket": "evenage-b3ce0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72087237069:android:647e84fa3667c05d5e9484",
+        "android_client_info": {
+          "package_name": "com.evenage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2cnBNuWdG7zf7b-uBVk1yhWpldLlHnLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
