@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import './addteam.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -127,10 +127,10 @@ class AvailableScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final crossAxisCount = (screenWidth / 200).floor(); // Adjust tile width dynamically
+    final crossAxisCount = 1; // Adjust tile width dynamically
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Available Events')),
+      appBar: AppBar(title: const Text('Available Events',style: TextStyle(color: Colors.white)),backgroundColor: Colors.black,),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount > 0 ? crossAxisCount : 2,
@@ -251,7 +251,7 @@ class _CreateScreenState extends State<CreateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Create Event')),
+      appBar: AppBar(title: const Text('Create Event',style: TextStyle(color: Colors.white)),backgroundColor: Colors.black),
       body: Form(
         key: _formKey,
         child: ListView(
@@ -320,7 +320,7 @@ class MyEvents extends StatelessWidget {
     final crossAxisCount = (screenWidth / 200).floor(); // Adjust tile width dynamically
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Available Events')),
+      appBar: AppBar(title: const Text('My Events',style: TextStyle(color: Colors.white),),backgroundColor: Colors.black),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount > 0 ? crossAxisCount : 2,
@@ -334,7 +334,17 @@ class MyEvents extends StatelessWidget {
           return _buildImageTile(
             title: 'Event Name',
             imageUrl: 'https://example.com/image.jpg',
-            onTap: () {/* Navigate to Event Details */},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Addteam(
+                        eventName: 'Event Name',
+                        imageUrl: 'https://example.com/image.jpg',
+                      )
+                  )
+              );
+            },
           );
         },
       ),
