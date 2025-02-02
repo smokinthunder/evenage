@@ -3,6 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'package:evenage/presentation/auth/signup_screen.dart';
 // import 'package:evenage/presentation/home.dart';
+
+import 'package:evenage/presentation/eventlist.dart';
+import 'package:evenage/presentation/home.dart';
 import 'package:flutter/material.dart';
 import 'package:evenage/domain/core/di/injectable.dart';
 import 'package:evenage/infrastructure/core/firebase_option.dart';
