@@ -37,7 +37,8 @@ class MyApp extends StatelessWidget {
             create: (context) => getIt<AuthBloc>(),
           ),
         ],
-        child: SignUpScreen(),
+        child: BottomNavBar(),
+        // child: SignUpScreen(),
       ),
     );
   }
